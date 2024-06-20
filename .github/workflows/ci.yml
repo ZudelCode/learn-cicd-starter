@@ -20,7 +20,7 @@ jobs:
 
       - name: check version
         run: go test ./... -cover
-
+  tests
     name: Test formating
     runs-on: ubuntu-latest
 
