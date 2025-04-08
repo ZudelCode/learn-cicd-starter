@@ -5,7 +5,11 @@ on:
     branches: [main]
 
 jobs:
-  Style:
+  tests:
+
+    name: Style
+    runs-on: ubuntu-latest
+    
     steps:
       - name: Check out code
         uses: actions/checkout@v4
@@ -17,7 +21,7 @@ jobs:
 
       - name: Run style tests 
         run: test -z $(fmt ./...) 
-  tests:
+    
     name: Tests
     runs-on: ubuntu-latest
 
