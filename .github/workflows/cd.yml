@@ -24,7 +24,7 @@ jobs:
       - id: 'auth to gcloud'
         uses: 'google-github-actions/auth@v2'
         with:
-          service_account: 'cloud-run-deployer@notely-458114.iam.gserviceaccount.com'
+          credentials_json: '${{secrets.GCP_CREDENTIALS}}'
 
       - name: 'Set up Cloud SDK'
         uses: 'google-github-actions/setup-gcloud@v2'
